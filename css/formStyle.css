@@ -1,0 +1,75 @@
+.form {
+    border-top: 2px solid rgb(143, 143, 143);
+}
+
+.form__fieldset {
+    border: 3px solid rgb(134, 130, 130);
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 50px 35px 50px 35px;
+    margin-top: 25px;
+    box-shadow: 5px 5px 5px 0px #ADADAD;
+}
+
+.form__legend {
+    outline: 3px solid #fff;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(95, 7, 51);
+    color: #fff;
+    font-size: 20px;
+    width: 80%;
+    text-align: center;
+}
+
+.form__labelText {
+    display: inline-block;
+    max-width: 150px;
+    width: 30%;
+    text-align: left;
+    margin: auto;
+}
+
+.form__labelText--result {
+    max-width: 300px;
+    width: 60%;
+}
+
+.form__field {
+    display: inline-block;
+    padding: 8px;
+    border: 1px solid rgb(172, 172, 172);
+    width: 70%;
+    margin: 10px 0px 20px;
+}
+
+.form__field--result {
+    width: 40%;
+}
+
+.form__field:hover {
+    background-color: rgba(255, 241, 245, 0.336);
+}
+
+.form__field:focus {
+    background-color: rgba(215, 249, 255, 0.336);
+    border: 2px solid rgb(114, 114, 114);
+}
+
+.form__field:read-only {
+    background-color: rgb(236, 229, 231);
+}
+
+.form__fieldset--hidden {
+    display: none;
+}
+
+.form__fieldset--result {
+    display: block;
+}
+
+.form__rateInformation {
+    font-style: italic;
+    text-align: center;
+    font-size: smaller;
+}

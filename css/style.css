@@ -1,0 +1,50 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.body {
+    font-family: 'Lato', sans-serif;
+    margin: auto;
+}
+
+.mainHeader {
+    text-align: center;
+    background-color: rgb(95, 7, 51);
+    color: #fff;
+    padding: 15px;
+    margin: 0px;
+    box-shadow: 0px -1px 10px 9px #999999;
+}
+
+.container {
+    margin: auto;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+.button {
+    background-color: rgb(95, 7, 51);
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.button:hover {
+    background-color: rgba(99, 10, 54, 0.829);
+    cursor: pointer;
+}
+
+.button:active {
+    background-color: rgba(187, 53, 82, 0.829);
+}
+
+.button:focus {
+    border: 2px solid #fff;
+    outline: 2px solid black;
+}
