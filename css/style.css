@@ -9,6 +9,9 @@ html {
 .body {
     font-family: 'Lato', sans-serif;
     margin: auto;
+    background-image: url(../images/background3.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .mainHeader {
@@ -17,13 +20,16 @@ html {
     color: #fff;
     padding: 15px;
     margin: 0px;
-    box-shadow: 0px -1px 10px 9px #999999;
 }
 
 .container {
-    margin: auto;
+    margin: 60px auto 100px;
     max-width: 1000px;
     padding: 20px;
+}
+
+.information {
+    color: #fff;
 }
 
 .button {
@@ -31,17 +37,18 @@ html {
     padding: 10px;
     color: #fff;
     border-radius: 5px;
+    border: 1px solid #fff;
     width: 100%;
     margin-bottom: 30px;
 }
 
 .button:hover {
-    background-color: rgba(99, 10, 54, 0.829);
+    background-color: rgb(99, 10, 72);
     cursor: pointer;
 }
 
 .button:active {
-    background-color: rgba(187, 53, 82, 0.829);
+    background-color: rgb(187, 53, 82);
 }
 
 .button:focus {

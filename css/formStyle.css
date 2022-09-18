@@ -1,18 +1,16 @@
 .form {
-    border-top: 2px solid rgb(143, 143, 143);
+    border-top: 2px solid rgba(255, 255, 255, 0.623);
 }
 
 .form__fieldset {
-    border: 3px solid rgb(134, 130, 130);
+    border: 3px solid rgb(95, 7, 51);
     border-radius: 5px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.753);
     padding: 50px 35px 50px 35px;
     margin-top: 25px;
-    box-shadow: 5px 5px 5px 0px #ADADAD;
 }
 
 .form__legend {
-    outline: 3px solid #fff;
     border-radius: 5px;
     padding: 10px;
     background-color: rgb(95, 7, 51);
