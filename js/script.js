@@ -1,57 +1,60 @@
-let formElement = document.querySelector(".js-formElement");
-let amountElement = document.querySelector(".js-amountElement");
-let currencyElement = document.querySelector(".js-currencyElement");
-let resultElement = document.querySelector(".js-resultElement");
-let rateElement = document.querySelector(".js-rateElement");
-let button = document.querySelector(".js-button");
-let hiddenFieldset = document.querySelector(".js-hiddenFieldset");
-let currencySymbol = document.querySelectorAll(".js-currencySymbol");
-
-
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    let amount = amountElement.value;
-    let currency = currencyElement.value;
+{
+  const calculateResult = currency => {
+    const rateElement = document.querySelector(".js-rateElement");
     let rate = undefined;
+    const amountElement = document.querySelector(".js-amountElement");
+    const amount = amountElement.value;
 
     switch (currency) {
-        case "EUR":
-            rate = 4.7643;
-            currencySymbol.forEach((e) => {
-                e.innerText = "EUR";
-            });
-            break;
 
-        case "USD":
-            rate = 4.6921;
-            currencySymbol.forEach((e) => {
-                e.innerText = "USD";
-            });
-            break;
+      case "EUR":
+        rate = 4.7643;
+        rateElement.value = String(rate).replace(".", ",");
+        return amount / rate;
 
-        case "GBP":
-            rate = 5.6103;
-            currencySymbol.forEach((e) => {
-                e.innerText = "GBP";
-            });
-            break;
+      case "USD":
+        rate = 4.6921;
+        rateElement.value = String(rate).replace(".", ",");
+        return amount / rate;
 
-        case "CZK":
-            rate = 0.1942;
-            currencySymbol.forEach((e) => {
-                e.innerText = "CZK";
-            });
-            break;
-    }
+      case "GBP":
+        rate = 5.6103;
+        rateElement.value = String(rate).replace(".", ",");
+        return amount / rate;
 
-    let result = amount / rate;
+      case "CZK":
+        rate = 0.1942;
+        rateElement.value = String(rate).replace(".", ",");
+        return amount / rate;
+    };
+  };
 
+  const switchCurrency = currency => {
+    const currencySymbol = document.querySelectorAll(".js-currencySymbol");
 
-    resultElement.value = result.toFixed(2);
-    rateElement.value = String(rate).replace(".", ",");
+    currencySymbol.forEach((e) => {
+      e.innerText = currency;
+    });
+  };
 
+  const showResult = () => {
+    const currencyElement = document.querySelector(".js-currencyElement");
+    const currency = currencyElement.value;
+    const resultElement = document.querySelector(".js-resultElement");
+    const hiddenFieldset = document.querySelector(".js-hiddenFieldset");
 
+    switchCurrency(currency);
+    resultElement.value = calculateResult(currency).toFixed(2);
     hiddenFieldset.classList.add("form__fieldset--result");
+  }
+
+  const formElement = document.querySelector(".js-formElement");
+
+  formElement.addEventListener("submit", (event) => {
+    const button = document.querySelector(".js-button");
+
+    event.preventDefault();
+    showResult();
     button.innerText = "Przelicz na nowo";
-});
+  });
+}
