@@ -9,7 +9,7 @@ Hi, my name is **Paweł Kruczek**, and this is my currency calculator. The proje
 
 <br>
 
-## Visit it yourself!
+## 🕹️ Demo
 Try this link 👉 https://pkruczek22.github.io/currency-converter/
 
 <br>
