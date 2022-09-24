@@ -1,52 +1,95 @@
 {
-  const calculateResult = currency => {
-    const rateElement = document.querySelector(".js-rateElement");
-    let rate = undefined;
-    const amountElement = document.querySelector(".js-amountElement");
+  const rateEUR = 4.7643;
+  const rateUSD = 4.6921;
+  const rateGBP = 5.6103;
+  const rateCZK = 0.1942;
+
+  const calculateResult = (currencyElement, amountElement) => {
     const amount = amountElement.value;
+    const currency = currencyElement.value;
 
     switch (currency) {
 
       case "EUR":
-        rate = 4.7643;
-        rateElement.value = String(rate).replace(".", ",");
-        return amount / rate;
+      return amount / rateEUR;
 
       case "USD":
-        rate = 4.6921;
-        rateElement.value = String(rate).replace(".", ",");
-        return amount / rate;
+      return amount / rateUSD;
 
       case "GBP":
-        rate = 5.6103;
-        rateElement.value = String(rate).replace(".", ",");
-        return amount / rate;
+      return amount / rateGBP;
 
       case "CZK":
-        rate = 0.1942;
-        rateElement.value = String(rate).replace(".", ",");
-        return amount / rate;
+      return amount / rateCZK;
     };
+
   };
 
-  const switchCurrency = currency => {
+  const updateResult = (resultElement, currencyElement) => {
+    const amountElement = document.querySelector(".js-amountElement");
+
+    resultElement.value = calculateResult(currencyElement, amountElement).toFixed(2);
+  };
+
+  const updateRate = (currencyElement, rateElement) => {
+    const currency = currencyElement.value;
+    let rate; 
+
+    switch (currency) {
+
+      case "EUR":
+        rate = rateEUR;
+
+        break;
+
+      case "USD":
+        rate = rateUSD;
+
+        break;
+
+      case "GBP":
+        rate = rateGBP;
+
+        break;
+
+      case "CZK":
+        rate = rateCZK;
+
+        break;
+    };
+
+    rateElement.value = String(rate).replace(".", ",");
+
+  };
+
+  const switchCurrencySymbols = currencyElement => {
     const currencySymbol = document.querySelectorAll(".js-currencySymbol");
+    const currency = currencyElement.value;
 
     currencySymbol.forEach((e) => {
       e.innerText = currency;
     });
   };
 
-  const showResult = () => {
-    const currencyElement = document.querySelector(".js-currencyElement");
-    const currency = currencyElement.value;
-    const resultElement = document.querySelector(".js-resultElement");
-    const hiddenFieldset = document.querySelector(".js-hiddenFieldset");
-
-    switchCurrency(currency);
-    resultElement.value = calculateResult(currency).toFixed(2);
+  const showResultForm = hiddenFieldset => {
     hiddenFieldset.classList.add("form__fieldset--result");
+  };
+
+  const updateResultForm = () => {
+    const currencyElement = document.querySelector(".js-currencyElement");
+    const hiddenFieldset = document.querySelector(".js-hiddenFieldset");
+    const resultElement = document.querySelector(".js-resultElement");
+    const rateElement = document.querySelector(".js-rateElement");
+
+    switchCurrencySymbols(currencyElement);
+    updateRate(currencyElement, rateElement);
+    updateResult(resultElement, currencyElement);
+    showResultForm(hiddenFieldset);
   }
+
+  const updateButtonText = button => {
+    button.innerText = "Przelicz na nowo";
+  };
 
   const formElement = document.querySelector(".js-formElement");
 
@@ -54,7 +97,7 @@
     const button = document.querySelector(".js-button");
 
     event.preventDefault();
-    showResult();
-    button.innerText = "Przelicz na nowo";
+    updateResultForm();
+    updateButtonText(button);
   });
 }
