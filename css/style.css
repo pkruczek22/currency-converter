@@ -32,14 +32,18 @@ html {
     color: #fff;
 }
 
+.buttonContainer {
+    text-align: center;
+}
+
 .button {
     background-color: rgb(95, 7, 51);
     padding: 10px;
     color: #fff;
     border-radius: 5px;
-    border: 1px solid #fff;
-    width: 100%;
-    margin-bottom: 30px;
+    border: 0;
+    width: 80%;
+    margin: 40px 0px;
 }
 
 .button:hover {

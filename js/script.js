@@ -71,20 +71,20 @@
     });
   };
 
-  const showResultForm = hiddenFieldset => {
-    hiddenFieldset.classList.add("form__fieldset--result");
+  const showResultForm = hiddenContainer => {
+    hiddenContainer.classList.add("form__container--result");
   };
 
   const updateResultForm = () => {
     const currencyElement = document.querySelector(".js-currencyElement");
-    const hiddenFieldset = document.querySelector(".js-hiddenFieldset");
+    const hiddenContainer = document.querySelector(".js-hiddenContainer");
     const resultElement = document.querySelector(".js-resultElement");
     const rateElement = document.querySelector(".js-rateElement");
 
     switchCurrencySymbols(currencyElement);
     updateRate(currencyElement, rateElement);
     updateResult(resultElement, currencyElement);
-    showResultForm(hiddenFieldset);
+    showResultForm(hiddenContainer);
   }
 
   const updateButtonText = button => {

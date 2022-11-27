@@ -35,8 +35,8 @@
           </p>
           <p>
             <label class="form__label">
-              <span class="form__labelText">Waluta*:</span><select class="form__field js-currencyElement"
-                name="currency">
+              <span class="form__labelText">Waluta*:</span>
+              <select class="form__field js-currencyElement" name="currency">
                 <option>EUR</option>
                 <option>USD</option>
                 <option>GBP</option>
@@ -45,13 +45,10 @@
             </label>
           </p>
         </div>
-      </fieldset>
-      <p>
-        <button class="button js-button">Przelicz!</button>
-      </p>
-      <fieldset class="form__fieldset form__fieldset--hidden js-hiddenFieldset">
-        <legend class="form__legend">Wynik przeliczenia PLN na <span class="js-currencySymbol"></span></legend>
-        <div class="form__container">
+        <p class="buttonContainer">
+          <button class="button js-button">Przelicz!</button>
+        </p>
+        <div class="form__container form__container--hidden js-hiddenContainer">
           <p>
             <label class="form__label">
               <span class="form__labelText">Kwota w <span class="js-currencySymbol"></span>:</span><input

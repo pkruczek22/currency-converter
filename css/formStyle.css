@@ -26,6 +26,14 @@
     margin: auto;
 }
 
+.form__container--hidden {
+    display: none;
+}
+
+.form__container--result {
+    display: block;
+}
+
 .form__label {
     display: flex;
     flex-wrap: wrap;
@@ -60,14 +68,6 @@
 
 .form__field:read-only {
     background-color: rgb(236, 229, 231);
-}
-
-.form__fieldset--hidden {
-    display: none;
-}
-
-.form__fieldset--result {
-    display: block;
 }
 
 .form__rateInformation {
