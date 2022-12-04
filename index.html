@@ -49,16 +49,13 @@
           <button class="button js-button">Przelicz!</button>
         </p>
         <div class="form__container form__container--hidden js-hiddenContainer">
-          <p>
-            <label class="form__label">
-              <span class="form__labelText">Kwota w <span class="js-currencySymbol"></span>:</span><input
-                class="form__field form__field--result js-resultElement" type="number" name="result" readonly>
-            </label>
+          <p class="form__resultField">
+            <span class="form__labelText">Kwota w <span class="js-currencySymbol"></span>:</span>
+            <span class="form__field form__field--result js-resultElement"></span>
           </p>
-          <p>
-            <label class="form__label">
-              <span class="form__labelText">Kurs:</span><input class="form__field js-rateElement" name="rate" readonly>
-            </label>
+          <p class="form__resultField">
+            <span class="form__labelText">Kurs:</span>
+            <span class="form__field js-rateElement"></span>
           </p>
           <p class="form__rateInformation">
             Zastosowano kurs Narodowego Banku Polskiego z <strong>tabeli nr 141/A/NBP/2022 z dnia 2022-07-22</strong>.

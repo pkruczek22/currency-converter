@@ -11,16 +11,16 @@
     switch (currency) {
 
       case "EUR":
-      return amount / rateEUR;
+        return amount / rateEUR;
 
       case "USD":
-      return amount / rateUSD;
+        return amount / rateUSD;
 
       case "GBP":
-      return amount / rateGBP;
+        return amount / rateGBP;
 
       case "CZK":
-      return amount / rateCZK;
+        return amount / rateCZK;
     };
 
   };
@@ -28,12 +28,13 @@
   const updateResult = (resultElement, currencyElement) => {
     const amountElement = document.querySelector(".js-amountElement");
 
-    resultElement.value = calculateResult(currencyElement, amountElement).toFixed(2);
+    const result = calculateResult(currencyElement, amountElement);
+    resultElement.innerText = (Number(result.toFixed(2))).toLocaleString();
   };
 
   const updateRate = (currencyElement, rateElement) => {
     const currency = currencyElement.value;
-    let rate; 
+    let rate;
 
     switch (currency) {
 
@@ -58,7 +59,7 @@
         break;
     };
 
-    rateElement.value = String(rate).replace(".", ",");
+    rateElement.innerText = String(rate).replace(".", ",");
 
   };
 
