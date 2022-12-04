@@ -44,11 +44,13 @@ html {
     border: 0;
     width: 80%;
     margin: 40px 0px;
+    transition: 0.25s;
 }
 
 .button:hover {
     background-color: rgb(99, 10, 72);
     cursor: pointer;
+    transform: scale(1.05);
 }
 
 .button:active {
@@ -58,4 +60,8 @@ html {
 .button:focus {
     border: 2px solid #fff;
     outline: 2px solid black;
+}
+
+.test {
+    color: #fff;
 }
