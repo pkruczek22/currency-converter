@@ -24,6 +24,7 @@
 .form__container {
     max-width: 80%;
     margin: auto;
+    margin-top: 50px;
 }
 
 .form__container--hidden {
@@ -32,9 +33,14 @@
 
 .form__container--result {
     display: block;
+    border-left: 5px solid rgb(95, 7, 51);
+    border-right: 5px solid rgb(95, 7, 51);
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 11px 3px #BABABA;
 }
 
-.form__label, .form__resultField {
+.form__label {
     display: grid;
     grid-template-columns: 150px 1fr;
     font-size: 18px;
@@ -44,6 +50,14 @@
 .form__labelText {
     min-width: 150px;
     padding: 10px 0px;
+    color: rgb(95, 7, 51);
+    font-weight: bold;
+}
+
+.form__labelText--result {
+    min-width: 200px;
+    text-align: center;
+    font-size: 15px;
 }
 
 .form__field {
@@ -55,6 +69,15 @@
     min-height: 38px;
     align-items: center;
     font-size: 15px;
+}
+
+.form__resultField {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    min-width: 200px;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .form__field:hover {
@@ -77,7 +100,7 @@
 }
 
 @media (max-width: 767px) {
-    .form__label, .form__resultField {
+    .form__label {
         grid-template-columns: 1fr;
     }
 }

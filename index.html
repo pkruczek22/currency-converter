@@ -27,35 +27,32 @@
       <fieldset class="form__fieldset">
         <legend class="form__legend">Kalkulator walut</legend>
         <div class="form__container">
-          <p>
-            <label class="form__label">
-              <span class="form__labelText">Kwota*:</span><input class="form__field js-amountElement" type="number"
-                name="amount" placeholder="Wpisz kwotę w PLN" autofocus required min="0" step="0.01">
-            </label>
-          </p>
-          <p>
-            <label class="form__label">
-              <span class="form__labelText">Waluta*:</span>
-              <select class="form__field js-currencyElement" name="currency">
-                <option>EUR</option>
-                <option>USD</option>
-                <option>GBP</option>
-                <option>CZK</option>
-              </select>
-            </label>
-          </p>
+          <label class="form__label">
+            <span class="form__labelText">Kwota*:</span><input class="form__field js-amountElement" type="number"
+              name="amount" placeholder="Wpisz kwotę w PLN" autofocus required min="0" step="0.01">
+          </label>
+          <label class="form__label">
+            <span class="form__labelText">Waluta*:</span>
+            <select class="form__field js-currencyElement" name="currency">
+              <option>EUR</option>
+              <option>USD</option>
+              <option>GBP</option>
+              <option>CZK</option>
+            </select>
+          </label>
         </div>
         <p class="buttonContainer">
           <button class="button js-button">Przelicz!</button>
         </p>
         <div class="form__container form__container--hidden js-hiddenContainer">
           <p class="form__resultField">
-            <span class="form__labelText">Kwota w <span class="js-currencySymbol"></span>:</span>
-            <span class="form__field form__field--result js-resultElement"></span>
+            <span class="form__labelText form__labelText--result">Kwota w <span
+                class="js-currencySymbol"></span>:</span>
+            <span class="form__resultField js-resultElement"></span>
           </p>
           <p class="form__resultField">
-            <span class="form__labelText">Kurs:</span>
-            <span class="form__field js-rateElement"></span>
+            <span class="form__labelText form__labelText--result">Kurs:</span>
+            <span class="form__resultField js-rateElement"></span>
           </p>
           <p class="form__rateInformation">
             Zastosowano kurs Narodowego Banku Polskiego z <strong>tabeli nr 141/A/NBP/2022 z dnia 2022-07-22</strong>.
