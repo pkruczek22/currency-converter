@@ -14,14 +14,6 @@ html {
     background-attachment: fixed;
 }
 
-.mainHeader {
-    text-align: center;
-    background-color: rgb(95, 7, 51);
-    color: #fff;
-    padding: 15px;
-    margin: 0px;
-}
-
 .container {
     margin: 60px auto 100px;
     max-width: 1000px;
@@ -58,10 +50,5 @@ html {
 }
 
 .button:focus {
-    border: 2px solid #fff;
     outline: 2px solid black;
-}
-
-.test {
-    color: #fff;
 }
