@@ -1,0 +1,85 @@
+.form {
+    margin-top: 100px;
+}
+
+.form__fieldset {
+    padding: 30px 60px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0px 0px 13px 4px #b3b3b3;
+    background-color: #fff;
+}
+
+.form__legend {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 15px;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    background-color: hsl(155, 85%, 28%);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.form__labelContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-left: 4px solid hsl(155, 85%, 28%);
+}
+
+.form__label {
+    padding: 15px 0px;
+    margin-left: 20px;
+}
+
+.form__labelText {
+    color: hsl(155, 100%, 17%);
+    font-weight: bold;
+    padding: 10px 0px;
+    display: inline-block;
+    width: 100%;
+    max-width: 200px;
+}
+
+.form__dataField {
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 2px solid hsl(155, 85%, 28%);
+    width: 100%;
+    max-width: 300px;
+    color: rgb(39, 39, 39);
+}
+
+.form__dataField:hover {
+    background-color: hsl(156, 100%, 94%);
+}
+
+.form__dataField:focus {
+    background-color: hsl(143, 85%, 87%);
+}
+
+.form__button {
+    width: 100%;
+    max-width: 1000px;
+    padding: 10px;
+    margin: 30px 0px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: hsl(155, 85%, 28%);
+    border: none;
+    border-radius: 25px;
+}
+
+.form__button:hover {
+    background-color: hsl(155, 85%, 38%);
+    cursor: pointer;
+}
+
+.form__button:active {
+    background-color: hsl(155, 85%, 48%);
+    outline: none;
+}

@@ -1,0 +1,19 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.body {
+    margin: auto;
+    max-width: 1000px;
+    background-color: #f1f1f1;
+    font-family: 'Noto Sans', sans-serif;
+    height: 100vh;
+}
+
+.container {
+    padding: 50px 10px;
+}
