@@ -24,9 +24,6 @@
     const formatNumber = (number) => {
 
         const fixedNumber = number.toFixed(2)
-        console.log(fixedNumber)
-        console.log(typeof(fixedNumber))
-        console.log(fixedNumber.endsWith("0"))
 
         switch (true) {
             case fixedNumber.includes(".00"):
@@ -40,12 +37,14 @@
         }
     };
 
-    const updateResult = (currency, rate) => {
+    const updateResult = () => {
+        const currency = document.querySelector(".js-currencyElement").value
+        const rate = setRate(currency)
         const resultFields = document.querySelectorAll(".js-resultField")
 
-        result = calculateResult(rate)
-        formattedResult = formatNumber(result)
-        formattedRate = String(rate).replace(".", ",")
+        const result = calculateResult(rate)
+        const formattedResult = formatNumber(result)
+        const formattedRate = String(rate).replace(".", ",")
 
         resultFields.forEach(field => {
             field.id === "rateField"
@@ -67,12 +66,9 @@
     };
 
     const onSubmit = () => {
-        const currency = document.querySelector(".js-currencyElement").value
-        const rate = setRate(currency)
-        updateResult(currency, rate)
+        updateResult()
         updateButton()
         revealResult()
-        formatNumber(100.00)
     }
 
     const init = () => {
