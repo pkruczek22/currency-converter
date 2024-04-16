@@ -5,15 +5,16 @@ This web project was created as part of the Frontend Web Developer course. Web i
 
 <br>
 
+## 🕹️ Demo
+Try this link 👉 https://pkruczek22.github.io/currency-converter/
+
+<br>
+
 ## Take a look at my website 😀
 ![website gif](https://github.com/pkruczek22/currency-converter/blob/main/images/readme.gif?raw=true)
 
 <br>
 
-## 🕹️ Demo
-Try this link 👉 https://pkruczek22.github.io/currency-converter/
-
-<br>
 
 ## Tech stack:
 - HTML
