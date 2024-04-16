@@ -24,13 +24,12 @@
 }
 
 .form__resultLabel {
-    background-color: hsl(155, 85%, 28%);
-    color: #fff;
+    color: hsl(155, 85%, 28%);
     font-weight: bold;
     padding: 10px 20px;
     margin: 5px 10px;
-    border-radius: 25px;
     border: none;
+    border-bottom: 4px solid hsl(155, 85%, 28%);
     width: 100%;
     max-width: 200px;
 }
