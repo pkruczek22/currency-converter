@@ -26,7 +26,9 @@ Try this link 👉 https://pkruczek22.github.io/currency-converter/
 <br>
 
 ## Would you like to see more? Check this out 👇
-💻 Homepage Project 👉 https://github.com/pkruczek22/homepage
+💻 Homepage Project 👉 https://github.com/pkruczek22/homepage/
+
+📋 To do list Project 👉 https://github.com/pkruczek22/to-do-list/
 
 <br> 
 
