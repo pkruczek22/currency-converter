@@ -1,0 +1,124 @@
+.form__container {
+    margin-top: 200px;
+    padding: 40px;
+}
+
+.form__fieldset {
+    border-radius: 15px;
+    padding: 50px 50px 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 1px 10px -3px #636363;
+    border-color: transparent;
+    background-color: #fff;
+}
+
+.form__legend {
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 25px;
+    font-weight: 700;
+    margin: auto;
+    background-color: #00a16c;
+    color: #fff;
+    min-width: 400px;
+    text-align: center;
+}
+
+.form__labelContainer {
+    border-left: 4px solid #00a16c;
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.form__label {
+    padding: 15px;
+}
+
+.form__labelText {
+    display: inline-block;
+    max-width: 250px;
+    width: 100%;
+    padding: 10px 5px;
+}
+
+.form__datafield {
+    min-width: 250px;
+    max-width: 400px;
+    width: 100%;
+    border: 2px solid #a8a8a8;
+    border-radius: 15px;
+    padding: 8px 15px;
+    font-size: 17px;
+    height: 40px;
+}
+
+.form__datafield:required {
+    background-color: #a1f8db3a;
+}
+
+.form__datafield:hover {
+    background-color: #02b87b98;
+}
+
+.form__datafield:focus {
+    background-color: #9fecbde1;
+}
+
+.form__infoLabel {
+    color: #666;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.form__button {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px 0px;
+    border: 2px solid #00a16c;
+    border-radius: 15px;
+    background-color: #00a16c;
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.form__button:hover {
+    background-color: #fff;
+    color: #00a16c;
+}
+
+.form__button:active {
+    border-color: #00e297;
+    color: #00e297;
+}
+
+.form__resultContainer {
+    display: none;
+    padding: 10px;
+    background-color: #797979;
+    color: #fff;
+    text-align: center;
+    margin: 20px 0px;
+    border-radius: 15px;
+    outline: 2px dashed #fff;
+    outline-offset: -5px;
+}
+
+.form__resultContainer--display {
+    display:block;
+}
+
+.form__resultLabelText {
+    font-size: 15px;
+}
+
+.form__resultContent {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+}

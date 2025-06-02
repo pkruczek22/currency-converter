@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/formStyle.css">
+    <script defer src="js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="body">
+    <div class="form__container">
+        <form class="form js-form">
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Currency Calculator</legend>
+                <div class="form__labelContainer">
+                    <label class="form__label">
+                        <span class="form__labelText">Enter the amount in PLN*</span>
+                        <input class="form__datafield js-amountElement" type="number" name="amount" ,
+                            placeholder="Enter PLN" , step="0.01" min="0" required>
+                    </label>
+                    <label class="form__label">
+                        <span class="form__labelText">Select currency*</span>
+                        <select class="form__datafield js-currencyElement" name="currency" type="text" required>
+                            <option selected>EUR</option>
+                            <option>USD</option>
+                            <option>GBP</option>
+                            <option>CHF</option>
+                        </select>
+                    </label>
+                </div>
+                <p class="form__infoLabel">Required fields are marked with *.</p>
+                <div class="form__resultContainer js-resultContainer">
+                    <p class="form__resultLabelText">Your result: <span class="form__resultContent js-resultAmount"></span></p>
+                    <p class="form__resultLabelText">Rate: <span class="form__resultContent js-resultRate"></span></p>
+                </div>
+                <p class="form__infoLabel">Source: The exchange rate of the NBP form <strong>table nr 141/A/NBP/2022 of
+                        the day
+                        2024-01-15</p>
+            </fieldset>
+            <button class="form__button js-formButton">Calculate</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
